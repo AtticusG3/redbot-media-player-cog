@@ -1,0 +1,20 @@
+{
+  "author": [
+    "KevynWatkins"
+  ],
+  "description": "Red RPC bridge methods for Home Assistant RedBot Media Player.",
+  "install_msg": "Run `[p]load ha_red_rpc` after installation. Audio and --rpc are required.",
+  "short": "Home Assistant RPC methods for Red Audio",
+  "min_bot_version": "3.5.0",
+  "min_python_version": [
+    3,
+    10,
+    0
+  ],
+  "tags": [
+    "audio",
+    "homeassistant",
+    "rpc"
+  ],
+  "type": "COG"
+}
