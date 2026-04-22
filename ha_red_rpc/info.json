@@ -3,7 +3,7 @@
     "KevynWatkins"
   ],
   "description": "JSON-RPC handlers for Home Assistant media control and playlist workflows.",
-  "install_msg": "Loaded. Ensure Red runs with --rpc and Audio is loaded.",
+  "install_msg": "Run `[p]load ha_red_rpc` after installation. Ensure Red runs with --rpc and Audio is loaded.",
   "short": "Home Assistant RPC bridge",
   "min_bot_version": "3.5.0",
   "min_python_version": [

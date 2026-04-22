@@ -1,3 +1,4 @@
+.cursor/
 __pycache__/
 *.pyc
 *.pyo
@@ -5,4 +6,30 @@ __pycache__/
 .pytest_cache/
 .venv/
 venv/
+
+# OS / editor metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.history/
+*.code-workspace
+
+# Local env and temp files
+.env
+.env.*
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Python tooling caches and build artifacts
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
 
