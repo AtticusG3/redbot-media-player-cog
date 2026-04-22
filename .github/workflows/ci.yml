@@ -1,0 +1,42 @@
+name: Cog CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    name: Validate cog metadata and importability
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate info.json files
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          files = [Path("info.json"), Path("ha_red_rpc/info.json")]
+          required = {"author", "description", "install_msg", "short", "min_bot_version", "type"}
+
+          for file in files:
+              data = json.loads(file.read_text(encoding="utf-8"))
+              missing = sorted(required - set(data.keys()))
+              if missing:
+                  raise SystemExit(f"{file} missing keys: {', '.join(missing)}")
+              if data.get("type") != "COG":
+                  raise SystemExit(f"{file} must have type=COG")
+
+          print("info.json validation passed")
+          PY
+
+      - name: Compile Python files
+        run: |
+          python -m compileall -q ha_red_rpc
