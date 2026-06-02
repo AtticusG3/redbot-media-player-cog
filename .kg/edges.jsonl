@@ -1,0 +1,1 @@
+{"from": "repo:redbot-media-player-cog", "to": "module:ha-red-rpc", "type": "CONTAINS", "source": "ha_red_rpc", "confidence": 1.0, "extracted_at": "2026-05-30T13:21:16Z"}

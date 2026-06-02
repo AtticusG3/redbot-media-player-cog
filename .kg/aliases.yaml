@@ -1,0 +1,3 @@
+# Alternate strings -> canonical node IDs
+README: doc:readme
+ha_red_rpc: module:ha-red-rpc
